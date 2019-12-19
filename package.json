@@ -8,11 +8,14 @@
     "jest": "^23.6.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "new": "node exercises/cli/index.js new",
+    "list": "node exercises/cli/index.js list"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "inquirer": "^7.0.1",
     "mime": "^2.3.1",
     "morgan": "^1.9.1"
   }
