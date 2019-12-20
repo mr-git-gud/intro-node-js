@@ -8,8 +8,12 @@ const path = require('path')
  * @param {String} name full file name of asset in asset folder
  */
 const findAsset = (name) => {
-  const assetPath = path.join(__dirname, 'assets', name);
-  return fs.readFile(assetPath);
+  const assetPath = path.resolve(__dirname, 'assets', name);
+  const file = fs.readFile(assetPath, (err, data) => {
+    if (err) console.log(err);
+    else return data.toString();
+  });
+  return file;
 }
 
 const hostname = '127.0.0.1';
@@ -37,7 +41,7 @@ const server = http.createServer((req, res) => {
     res.write("Oops we couldn't find that!");
     res.end();
   }
-  res.send();
+  res.send;
 })
 
 server.listen(port, hostname, () => {

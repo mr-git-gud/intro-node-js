@@ -10,13 +10,18 @@
   "scripts": {
     "test": "jest",
     "new": "node exercises/cli/index.js new",
-    "list": "node exercises/cli/index.js list"
+    "list": "node exercises/cli/index.js list",
+    "start": "node exercises/api/server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
     "inquirer": "^7.0.1",
     "mime": "^2.3.1",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   }
 }
